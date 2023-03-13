@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
 
-        ConstraintLayout constraintLayout = new ConstraintLayout(this);
+        ConstraintLayout constraintlayout = new ConstraintLayout(this);
         TextView textView = new TextView(this);
         textView.setText("Hello, Android!");
         textView.setTextSize(26);
@@ -24,13 +24,15 @@ public class MainActivity extends AppCompatActivity {
 
         layoutParams.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID;
         layoutParams.topToTop = ConstraintLayout.LayoutParams.PARENT_ID;
+        layoutParams.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID;
+
 
         textView.setLayoutParams(layoutParams);
-        constraintLayout.addView(textView);
-        setContentView(constraintLayout);
+        constraintlayout.addView(textView);
+        setContentView(constraintlayout);
 
 
-        setContentView(textView);
+
 
 
 
